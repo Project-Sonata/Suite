@@ -21,6 +21,7 @@ target/
 /maven-rep/**
 mvnw
 mvnw.cmd
+.mvn/wrapper/
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
