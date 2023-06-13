@@ -1,9 +1,9 @@
-package com.odeyalo.sonata.common.authentication.dto.response;
+package com.odeyalo.sonata.sonata.common.authentication.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.odeyalo.sonata.common.authentication.dto.UserInfo;
+import com.odeyalo.sonata.sonata.common.authentication.dto.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.experimental.SuperBuilder;

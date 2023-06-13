@@ -13,7 +13,9 @@ class StandardServletSonataResponseErrorDecoder(private val objectMapper: Object
     override fun decode(s: String, response: Response): Exception {
         val error = objectMapper.readValue(response.body().asInputStream(), AuthenticationResultResponse::class.java)
         when (error.errorDetails.code) {
-            AuthenticationErrorCodes.INVALID_CREDENTIALS -> return InvalidCredentialsException(error.errorDetails)
+            AuthenticationErrorCodes.INVALID_CREDENTIALS -> return InvalidCredentialsException(
+                error.errorDetails
+            )
         }
         return GenericApiException(error.errorDetails)
     }

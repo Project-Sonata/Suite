@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.common.authentication;
+package com.odeyalo.sonata.sonata.common.authentication;
 
 /**
  * The class contain the list of error codes that can be occurred while working with AuthenticationClient

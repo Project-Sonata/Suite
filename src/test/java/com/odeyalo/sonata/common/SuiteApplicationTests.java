@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.common;
+package com.odeyalo.sonata.sonata.common;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

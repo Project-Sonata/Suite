@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.common.authentication.dto.response;
+package com.odeyalo.sonata.sonata.common.authentication.dto.response;
 
 import lombok.*;
 import org.springframework.hateoas.RepresentationModel;

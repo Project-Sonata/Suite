@@ -1,7 +1,7 @@
-package com.odeyalo.sonata.common.authentication.exception;
+package com.odeyalo.sonata.sonata.common.authentication.exception;
 
-import com.odeyalo.sonata.common.shared.ErrorDetails;
-import com.odeyalo.sonata.common.shared.GenericApiException;
+import com.odeyalo.sonata.sonata.common.shared.ErrorDetails;
+import com.odeyalo.sonata.sonata.common.shared.GenericApiException;
 
 /**
  * Indicates that registration has been failed and cannot be performed

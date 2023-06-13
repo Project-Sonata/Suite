@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.common.authentication.dto.request;
+package com.odeyalo.sonata.sonata.common.authentication.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
