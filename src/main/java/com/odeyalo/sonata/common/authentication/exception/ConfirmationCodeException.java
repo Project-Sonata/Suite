@@ -1,6 +1,5 @@
 package com.odeyalo.sonata.common.authentication.exception;
 
-import com.odeyalo.sonata.common.shared.ApiErrorDetailsInfo;
 import com.odeyalo.sonata.common.shared.ErrorDetails;
 import com.odeyalo.sonata.common.shared.GenericApiException;
 

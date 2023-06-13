@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.common.authentication.config.reactive;
+package com.odeyalo.sonata.suite.reactive.config;
 
 import org.springframework.context.annotation.Bean;
 import reactivefeign.client.ReactiveHttpResponse;
