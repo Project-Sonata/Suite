@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.sonata.common.authentication.dto;
+package com.odeyalo.sonata.common.authentication.dto;
 
 public enum MfaType {
     /**

@@ -1,7 +1,7 @@
-package com.odeyalo.sonata.sonata.common.authentication.exception;
+package com.odeyalo.sonata.common.authentication.exception;
 
-import com.odeyalo.sonata.sonata.common.shared.ErrorDetails;
-import com.odeyalo.sonata.sonata.common.shared.GenericApiException;
+import com.odeyalo.sonata.common.shared.ErrorDetails;
+import com.odeyalo.sonata.common.shared.GenericApiException;
 
 public class LoginAuthenticationFailedException extends GenericApiException {
     public LoginAuthenticationFailedException(ErrorDetails errorDetails) {

@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.sonata.common.shared;
+package com.odeyalo.sonata.common.shared;
 
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.odeyalo.sonata.sonata.common;
+package com.odeyalo.sonata.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
