@@ -5,6 +5,10 @@ import com.odeyalo.sonata.suite.brokers.events.user.data.UserRegisteredEventData
 
 public class UserRegisteredEvent extends AbstractEvent<UserRegisteredEventData> {
 
+    public UserRegisteredEvent() {
+        super(null);
+    }
+
     public UserRegisteredEvent(String id, long creationTime, UserRegisteredEventData body) {
         super(id, creationTime, body);
     }
