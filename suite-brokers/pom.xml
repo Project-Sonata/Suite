@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.odeyalo.sonata.suite</groupId>
-    <artifactId>kafka</artifactId>
+    <artifactId>brokers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>suite-kafka</name>
     <description>Suite-Brokers contains DTO classes that used to share data using brokers(Kafka, Redis, RabbitMQ, so on)</description>
