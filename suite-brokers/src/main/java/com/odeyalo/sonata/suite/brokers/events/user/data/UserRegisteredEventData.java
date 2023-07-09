@@ -1,22 +1,24 @@
 package com.odeyalo.sonata.suite.brokers.events.user.data;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 import java.util.Objects;
 
+@AllArgsConstructor(staticName = "of")
+@NoArgsConstructor
+@Builder
+@Data
 public class UserRegisteredEventData {
     private String id;
     private String email;
-
-    public UserRegisteredEventData() {
-    }
-
-    public UserRegisteredEventData(String id, String email) {
-        this.id = id;
-        this.email = email;
-    }
-
-    public static UserRegisteredEventData of(String id, String email) {
-        return new UserRegisteredEventData(id, email);
-    }
+    private String countryCode;
+    private String gender;
+    private LocalDate birthdate;
+    private boolean enableNotification;
 
     public String id() {
         return id;
@@ -25,42 +27,4 @@ public class UserRegisteredEventData {
     public String email() {
         return email;
     }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (UserRegisteredEventData) obj;
-        return Objects.equals(this.id, that.id) &&
-                Objects.equals(this.email, that.email);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, email);
-    }
-
-    @Override
-    public String toString() {
-        return "UserRegisteredEventData[" +
-                "id=" + id + ", " +
-                "email=" + email + ']';
-    }
-
 }
