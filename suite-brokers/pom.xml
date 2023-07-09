@@ -11,9 +11,26 @@
     <groupId>com.odeyalo.sonata.suite</groupId>
     <artifactId>brokers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>suite-kafka</name>
+
+    <name>suite-brokers</name>
     <description>Suite-Brokers contains DTO classes that used to share data using brokers(Kafka, Redis, RabbitMQ, so on)</description>
+
     <properties>
         <java.version>17</java.version>
     </properties>
+
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/Project-Sonata/Suite</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/Project-Sonata/Common</url>
+        </repository>
+    </repositories>
 </project>
