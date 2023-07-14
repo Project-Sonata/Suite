@@ -9,5 +9,7 @@ public class AuthenticationErrorCodes {
     public static final String INVALID_EMAIL = "invalid_email";
     public static final String EMAIL_ALREADY_TAKEN = "email_already_taken";
     public static final String INVALID_PASSWORD = "invalid_password";
+    public static final String INVALID_OLD_PASSWORD = "invalid_old_password";
+    public static final String INVALID_NEW_PASSWORD = "new_password_pattern_mismatch";
     public static final String SERVER_ERROR = "server_error";
 }
