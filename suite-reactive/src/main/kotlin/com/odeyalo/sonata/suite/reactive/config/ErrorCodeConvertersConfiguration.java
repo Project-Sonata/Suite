@@ -1,14 +1,21 @@
 package com.odeyalo.sonata.suite.reactive.config;
 
-import com.odeyalo.sonata.suite.reactive.exception.converter.EmailAlreadyTakenErrorCode2ThrowableConverter;
-import com.odeyalo.sonata.suite.reactive.exception.converter.EmailConfirmationRequiredErrorCode2ThrowableConverter;
-import com.odeyalo.sonata.suite.reactive.exception.converter.InvalidEmailErrorCode2ThrowableConverter;
-import com.odeyalo.sonata.suite.reactive.exception.converter.InvalidPasswordErrorCode2ThrowableConverter;
+import com.odeyalo.sonata.suite.reactive.exception.converter.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ErrorCodeConvertersConfiguration {
+
+    @Bean
+    public InvalidNewPasswordErrorCode2ThrowableConverter invalidNewPasswordErrorCode2ThrowableConverter() {
+        return new InvalidNewPasswordErrorCode2ThrowableConverter();
+    }
+
+    @Bean
+    public InvalidOldPasswordErrorCode2ThrowableConverter invalidOldPasswordErrorCode2ThrowableConverter() {
+        return new InvalidOldPasswordErrorCode2ThrowableConverter();
+    }
 
     @Bean
     public EmailAlreadyTakenErrorCode2ThrowableConverter emailAlreadyTakenErrorCode2ThrowableConverter() {

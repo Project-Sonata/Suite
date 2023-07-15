@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.odeyalo.sonata.suite.reactive.exception.converter.ErrorCode2ThrowableConverter;
 import com.odeyalo.sonata.suite.reactive.exception.converter.ErrorCodeConvertersRegistry;
 import com.odeyalo.sonata.suite.reactive.exception.converter.MapErrorCodeConvertersContainer;
+import com.odeyalo.sonata.suite.reactive.exception.decoder.AuthClientPasswordChangeReactiveFeignClientMethodExceptionHandlerDecoder;
 import com.odeyalo.sonata.suite.reactive.exception.decoder.DetaultReactiveFeignClientMethodExceptionHandlerDecoder;
 import com.odeyalo.sonata.suite.reactive.exception.decoder.ReactiveFeignClientMethodExceptionHandlerDecoder;
 import com.odeyalo.sonata.suite.reactive.exception.decoder.impl.AuthClientConfirmationMethodExceptionHandlerDecoder;
@@ -19,6 +20,11 @@ import java.util.List;
 
 @Configuration
 public class ExceptionDecodersRegistryConfiguration {
+
+    @Bean
+    public AuthClientPasswordChangeReactiveFeignClientMethodExceptionHandlerDecoder authClientPasswordChangeReactiveFeignClientMethodExceptionHandlerDecoder(ObjectMapper mapper) {
+        return new AuthClientPasswordChangeReactiveFeignClientMethodExceptionHandlerDecoder(mapper);
+    }
 
     @Bean
     public ErrorCodeConvertersRegistry errorCodeConvertersRegistry(List<ErrorCode2ThrowableConverter> converters) {
