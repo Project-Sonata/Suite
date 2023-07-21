@@ -22,6 +22,7 @@ public class CompositeReactiveHttpRequestInterceptor implements ReactiveHttpRequ
     public Mono<ReactiveHttpRequest> apply(ReactiveHttpRequest reactiveHttpRequest) {
         return Flux.fromIterable(interceptors)
                 .flatMap(interceptor -> interceptor.apply(reactiveHttpRequest))
+                .defaultIfEmpty(reactiveHttpRequest)
                 .next();
     }
 }
