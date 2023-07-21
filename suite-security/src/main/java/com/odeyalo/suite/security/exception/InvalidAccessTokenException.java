@@ -1,9 +1,10 @@
 package com.odeyalo.suite.security.exception;
 
 import lombok.Getter;
+import org.springframework.security.core.AuthenticationException;
 
 @Getter
-public class InvalidAccessTokenException extends RuntimeException {
+public class InvalidAccessTokenException extends AuthenticationException {
     private final String tokenValue;
 
     /**
