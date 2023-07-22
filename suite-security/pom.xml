@@ -19,6 +19,13 @@
         <spring-cloud.version>2022.0.3</spring-cloud.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/Project-Sonata/Suite</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
