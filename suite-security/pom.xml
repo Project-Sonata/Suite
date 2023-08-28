@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.odeyalo.sonata.suite</groupId>
     <artifactId>security</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>suite-security</name>
     <description>suite-security</description>
     <properties>
