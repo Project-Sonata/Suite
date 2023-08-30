@@ -19,9 +19,9 @@ public class AllErrorsReactiveStatusHandler implements ReactiveStatusHandler {
     protected final Logger logger = LoggerFactory.getLogger(AllErrorsReactiveStatusHandler.class);
 
     public AllErrorsReactiveStatusHandler(ObjectMapper objectMapper, ClientMethodExceptionHandlerDecoderRegistry container) {
-        System.out.println("created error decoder");
         this.objectMapper = objectMapper;
         this.container = container;
+        this.logger.info("Successfully created ReactiveStatusHandler to handle all errors. \n Container with exception handlers: {}", container);
     }
 
     @Override
