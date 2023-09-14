@@ -9,7 +9,7 @@ import java.util.Collection;
  * Base class for authenticated subjects objects.
  * Implementations which use this class should be immutable.
  */
-public class AbstractAuthenticatedSubject extends AbstractAuthenticationToken implements AuthenticatedSubject {
+public abstract class AbstractAuthenticatedSubject extends AbstractAuthenticationToken implements AuthenticatedSubject {
     protected Object principal;
     protected AuthenticatedUserDetails details;
     protected Object credentials;
