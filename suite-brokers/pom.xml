@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.odeyalo.sonata.suite</groupId>
     <artifactId>brokers</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
 
     <name>suite-brokers</name>
     <description>Suite-Brokers contains DTO classes that used to share data using brokers(Kafka, Redis, RabbitMQ, so on)</description>
