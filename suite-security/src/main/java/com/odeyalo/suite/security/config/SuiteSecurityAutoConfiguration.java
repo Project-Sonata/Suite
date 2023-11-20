@@ -46,6 +46,11 @@ public class SuiteSecurityAutoConfiguration {
     }
 
     @Bean
+    public SessionAccessTokenExtractor sessionAccessTokenExtractor() {
+        return new SessionAccessTokenExtractor();
+    }
+
+    @Bean
     @ConditionalOnMissingBean
     public ServerAuthenticationEntryPoint serverAuthenticationEntryPoint() {
         return new UnathorizedHttpStatusServerEntryPoint();
