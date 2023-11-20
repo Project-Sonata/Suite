@@ -15,4 +15,7 @@ public interface ReactiveTokenIntrospectionClient {
     @PostMapping("/token/info")
     Mono<ResponseEntity<Mono<TokenIntrospectionResponse>>> introspectToken(@RequestBody TokenIntrospectionRequest req);
 
+    @PostMapping("/token/oauth2/info")
+    Mono<ResponseEntity<Mono<TokenIntrospectionResponse>>> introspectOauth2Token(@RequestBody TokenIntrospectionRequest req);
+
 }
