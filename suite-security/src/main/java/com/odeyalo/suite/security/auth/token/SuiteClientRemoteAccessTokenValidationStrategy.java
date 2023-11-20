@@ -16,7 +16,6 @@ public class SuiteClientRemoteAccessTokenValidationStrategy implements RemoteAcc
 
     public SuiteClientRemoteAccessTokenValidationStrategy(ReactiveTokenIntrospectionClient tokenIntrospectionClient, ValidatedAccessTokenConverter<TokenIntrospectionResponse> accessTokenConverter) {
         this.tokenIntrospectionClient = tokenIntrospectionClient;
-        System.out.println("CLIENT: "  + tokenIntrospectionClient);
         this.accessTokenConverter = accessTokenConverter;
     }
 
