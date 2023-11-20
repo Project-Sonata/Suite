@@ -10,15 +10,15 @@
     </parent>
     <groupId>com.odeyalo.sonata.suite</groupId>
     <artifactId>reactive</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.8</version>
     <name>suite-reactive</name>
     <description>Suite reactive is a part of Suite module to provide communication with microservices in reactive way</description>
 
     <properties>
         <java.version>17</java.version>
         <kotlin.version>1.8.21</kotlin.version>
-        <feign.reactive.version>4.0.0</feign.reactive.version>
-        <suite.main.version>0.0.6</suite.main.version>
+        <feign.reactive.version>4.0.3</feign.reactive.version>
+        <suite.main.version>0.0.8</suite.main.version>
     </properties>
 
     <distributionManagement>
