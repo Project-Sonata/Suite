@@ -1,5 +1,7 @@
 package com.odeyalo.sonata.suite.brokers.events.album.data;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -14,9 +16,10 @@ import java.util.stream.Stream;
 @AllArgsConstructor(staticName = "of")
 @Builder
 public class UploadedTrackSimplifiedInfoContainerDto implements Iterable<UploadedTrackSimplifiedInfoDto> {
-    @Getter(value = AccessLevel.PRIVATE)
+    @Getter(value = AccessLevel.PUBLIC)
     List<UploadedTrackSimplifiedInfoDto> items;
 
+    @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
     public static UploadedTrackSimplifiedInfoContainerDto fromCollection(Collection<UploadedTrackSimplifiedInfoDto> items) {
         return builder().items(new ArrayList<>(items)).build();
     }
@@ -31,6 +34,7 @@ public class UploadedTrackSimplifiedInfoContainerDto implements Iterable<Uploade
         return getItems().size();
     }
 
+    @JsonIgnore
     public boolean isEmpty() {
         return getItems().isEmpty();
     }
