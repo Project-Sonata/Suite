@@ -1,5 +1,7 @@
 package com.odeyalo.sonata.suite.brokers.events.album.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -27,6 +29,7 @@ public class ArtistContainerDto implements Iterable<ArtistDto> {
         return artists.size();
     }
 
+    @JsonIgnore
     public boolean isEmpty() {
         return artists.isEmpty();
     }
