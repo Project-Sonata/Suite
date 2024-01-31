@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.odeyalo.sonata.suite.brokers.events.AbstractEvent;
 import com.odeyalo.sonata.suite.brokers.events.album.data.BasicAlbumInfoUploadedPayload;
 
-public class BasicAlbumInfoUploadedEvent extends AbstractEvent<BasicAlbumInfoUploadedPayload> {
+public class BasicAlbumInfoUploadedEvent extends AbstractEvent<BasicAlbumInfoUploadedPayload> implements AlbumUploadingEvent {
 
 
     public BasicAlbumInfoUploadedEvent(BasicAlbumInfoUploadedPayload body) {

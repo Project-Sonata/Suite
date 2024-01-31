@@ -6,7 +6,7 @@ import com.odeyalo.sonata.suite.brokers.events.EventTypeProvider;
 import com.odeyalo.sonata.suite.brokers.events.album.data.Mp3TrackPreviewGeneratedPayload;
 import org.jetbrains.annotations.NotNull;
 
-public class Mp3TrackPreviewGeneratedEvent extends AbstractEvent<Mp3TrackPreviewGeneratedPayload> implements EventTypeProvider {
+public class Mp3TrackPreviewGeneratedEvent extends AbstractEvent<Mp3TrackPreviewGeneratedPayload> implements EventTypeProvider, AlbumUploadingEvent {
     public static final String EVENT_TYPE = "mp3_preview_generated";
 
     @JsonCreator
