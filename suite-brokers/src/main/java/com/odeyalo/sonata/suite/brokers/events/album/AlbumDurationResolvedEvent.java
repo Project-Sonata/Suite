@@ -6,7 +6,7 @@ import com.odeyalo.sonata.suite.brokers.events.EventTypeProvider;
 import com.odeyalo.sonata.suite.brokers.events.album.data.AlbumDurationResolvedPayload;
 import org.jetbrains.annotations.NotNull;
 
-public class AlbumDurationResolvedEvent extends AbstractEvent<AlbumDurationResolvedPayload> implements EventTypeProvider {
+public class AlbumDurationResolvedEvent extends AbstractEvent<AlbumDurationResolvedPayload> implements AlbumUploadingEvent {
 
     public static final String EVENT_TYPE = "track_length_resolved";
 
@@ -18,5 +18,10 @@ public class AlbumDurationResolvedEvent extends AbstractEvent<AlbumDurationResol
     @Override
     public @NotNull String getEventType() {
         return EVENT_TYPE;
+    }
+
+    @Override
+    public @NotNull String getAlbumId() {
+        return body.getAlbumId();
     }
 }
