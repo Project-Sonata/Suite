@@ -3,8 +3,6 @@ package com.odeyalo.sonata.suite.brokers.events.album.data;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDate;
-
 @Data
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor

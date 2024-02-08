@@ -23,4 +23,9 @@ public class Mp3TrackPreviewGeneratedEvent extends AbstractEvent<Mp3TrackPreview
     public String getEventType() {
         return EVENT_TYPE;
     }
+
+    @Override
+    public @NotNull String getAlbumId() {
+        return body.getAlbumId();
+    }
 }
