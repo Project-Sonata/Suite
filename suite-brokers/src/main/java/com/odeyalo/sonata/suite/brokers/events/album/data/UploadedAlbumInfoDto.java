@@ -17,4 +17,5 @@ public class UploadedAlbumInfoDto {
     int totalTracksCount;
     ArtistContainerDto artists;
     SimplifiedTrackDtoContainer tracks;
+    CoverImages images;
 }
