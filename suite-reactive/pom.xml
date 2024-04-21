@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.odeyalo.sonata.suite</groupId>
     <artifactId>reactive</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <name>suite-reactive</name>
     <description>Suite reactive is a part of Suite module to provide communication with microservices in reactive way</description>
 
