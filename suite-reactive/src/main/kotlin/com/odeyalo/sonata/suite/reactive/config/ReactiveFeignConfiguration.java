@@ -1,6 +1,5 @@
 package com.odeyalo.sonata.suite.reactive.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.odeyalo.sonata.suite.reactive.config.support.AllErrorsReactiveStatusHandler;
 import com.odeyalo.sonata.suite.reactive.config.support.interceptor.CompositeReactiveHttpRequestInterceptor;
 import com.odeyalo.sonata.suite.reactive.config.support.interceptor.SuiteReactiveHttpRequestInterceptor;
@@ -13,8 +12,8 @@ import java.util.List;
 public class ReactiveFeignConfiguration {
 
     @Bean
-    public AllErrorsReactiveStatusHandler allErrorsReactiveStatusHandler(ObjectMapper mapper, ClientMethodExceptionHandlerDecoderRegistry registry) {
-        return new AllErrorsReactiveStatusHandler(mapper, registry);
+    public AllErrorsReactiveStatusHandler allErrorsReactiveStatusHandler(ClientMethodExceptionHandlerDecoderRegistry registry) {
+        return new AllErrorsReactiveStatusHandler(registry);
     }
 
     @Bean
