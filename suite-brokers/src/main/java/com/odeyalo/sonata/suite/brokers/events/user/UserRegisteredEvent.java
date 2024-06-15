@@ -2,6 +2,7 @@ package com.odeyalo.sonata.suite.brokers.events.user;
 
 import com.odeyalo.sonata.suite.brokers.events.AbstractEvent;
 import com.odeyalo.sonata.suite.brokers.events.user.data.UserRegisteredEventData;
+import org.jetbrains.annotations.NotNull;
 
 public class UserRegisteredEvent extends AbstractEvent<UserRegisteredEventData> {
 
@@ -19,5 +20,10 @@ public class UserRegisteredEvent extends AbstractEvent<UserRegisteredEventData> 
 
     public UserRegisteredEventData getEventData() {
         return getBody();
+    }
+
+    @Override
+    public @NotNull String getEventType() {
+        return "user_registered_event";
     }
 }
