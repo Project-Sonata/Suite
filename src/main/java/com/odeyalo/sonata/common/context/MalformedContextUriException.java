@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class MalformedContextUriException extends Exception {
+public class MalformedContextUriException extends RuntimeException {
     String uriString;
 
     public MalformedContextUriException(String uriString) {
