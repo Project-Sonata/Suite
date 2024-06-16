@@ -7,4 +7,6 @@ public enum ContextEntityType {
     TRACK,
     ALBUM,
     ARTIST,
+    PLAYLIST,
+    USER
 }

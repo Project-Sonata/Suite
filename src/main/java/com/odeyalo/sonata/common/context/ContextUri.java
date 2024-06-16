@@ -9,6 +9,8 @@ import org.springframework.util.Assert;
 
 import java.util.Objects;
 
+import static com.odeyalo.sonata.common.context.ContextEntityType.*;
+
 /**
  * Basic:
  * Sonata-Project has context-uris to identity the resource.
@@ -22,6 +24,9 @@ import java.util.Objects;
  * So if you send sonata:playlist:mikunakano in request, then Sonata-Project will return the info about playlist with ID "mikunakano"
  * </p>
  * Context uri is a URI that identify the resource by ID. URI provide full info about the entity(The type of entity and ID)
+ *
+ * <p>
+ * To create a {@link ContextUri} use a {@link #fromString(String)} method or 'for*' methods to create {@link ContextUri} for specific entity
  */
 @Value
 @AllArgsConstructor(staticName = "of")
@@ -33,6 +38,7 @@ public class ContextUri {
 
     /**
      * Method to check if a {@link String} is a valid context uri string
+     *
      * @param contextUriString - string to check
      * @return - {@code true} if {@link String} is a valid context uri, {@code false} otherwise
      */
@@ -42,14 +48,39 @@ public class ContextUri {
 
     /**
      * Factory method to create a {@link ContextUri} from {@link String}
+     *
      * @param contextUriString - {@link String} to create {@link ContextUri} from
      * @return created {@link ContextUri}
-     *
      * @throws MalformedContextUriException - if a {@link String} is not valid
      */
     @NotNull
     public static ContextUri fromString(final String contextUriString) {
         return ContextUriParser.getInstance().parse(contextUriString);
+    }
+
+    @NotNull
+    public static ContextUri forPlaylist(@NotNull final String playlistId) {
+        return of(PLAYLIST, playlistId);
+    }
+
+    @NotNull
+    public static ContextUri forAlbum(@NotNull final String albumId) {
+        return of(ALBUM, albumId);
+    }
+
+    @NotNull
+    public static ContextUri forUser(@NotNull final String userId) {
+        return of(USER, userId);
+    }
+
+    @NotNull
+    public static ContextUri forArtist(@NotNull final String artistId) {
+        return of(ARTIST, artistId);
+    }
+
+    @NotNull
+    public static ContextUri forTrack(@NotNull final String trackId) {
+        return of(TRACK, trackId);
     }
 
     private static class ContextUriParser {
