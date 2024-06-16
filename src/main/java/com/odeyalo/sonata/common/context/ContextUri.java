@@ -36,6 +36,8 @@ public class ContextUri {
     @NotNull
     String entityId;
 
+    private static final String URI_PREFIX = "sonata";
+
     /**
      * Method to check if a {@link String} is a valid context uri string
      *
@@ -83,8 +85,20 @@ public class ContextUri {
         return of(TRACK, trackId);
     }
 
+    /**
+     * @return VALID string representation of this {@link ContextUri}
+     */
+    @NotNull
+    public String asString() {
+        return new StringBuilder("sonata")
+                .append(":")
+                .append(getType().toString().toLowerCase())
+                .append(":")
+                .append(getEntityId())
+                .toString();
+    }
+
     private static class ContextUriParser {
-        private static final String URI_PREFIX = "sonata";
         private static final String CONTEXT_URI_SPLITERATOR = ":";
         private static final ContextUriParser INSTANCE = new ContextUriParser();
 

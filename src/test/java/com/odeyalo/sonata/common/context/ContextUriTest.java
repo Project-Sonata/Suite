@@ -44,6 +44,40 @@ class ContextUriTest {
                 .isInstanceOf(InvalidContextUriLengthException.class);
     }
 
+    @Test
+    void shouldReturnContextUriAsValidContextUriStringForTrack() {
+        final ContextUri contextUri = ContextUri.forTrack("123");
+
+        assertThat(contextUri.asString()).isEqualTo("sonata:track:123");
+    }
+
+    @Test
+    void shouldReturnContextUriAsValidContextUriStringForAlbum() {
+        final ContextUri contextUri = ContextUri.forAlbum("12345");
+
+        assertThat(contextUri.asString()).isEqualTo("sonata:album:12345");
+    }
+
+    @Test
+    void shouldReturnContextUriAsValidContextUriStringForUser() {
+        final ContextUri contextUri = ContextUri.forUser("odeyalo");
+
+        assertThat(contextUri.asString()).isEqualTo("sonata:user:odeyalo");
+    }
+
+    @Test
+    void shouldReturnContextUriAsValidContextUriStringForPlaylist() {
+        final ContextUri contextUri = ContextUri.forPlaylist("7777");
+
+        assertThat(contextUri.asString()).isEqualTo("sonata:playlist:7777");
+    }
+
+    @Test
+    void shouldReturnContextUriAsValidContextUriStringForArtist() {
+        final ContextUri contextUri = ContextUri.forArtist("1488");
+
+        assertThat(contextUri.asString()).isEqualTo("sonata:artist:1488");
+    }
 
     @Nested
     @TestInstance(TestInstance.Lifecycle.PER_CLASS)
