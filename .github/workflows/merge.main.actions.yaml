@@ -16,4 +16,4 @@ jobs:
       - name: "Run tests"
         uses: ./.github/actions/tests
       - name: "Deploy to Github Registry"
-        run: mvn deploy
+        run: mvn deploy -s settings.xml

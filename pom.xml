@@ -11,7 +11,7 @@
 
     <groupId>com.odeyalo.sonata</groupId>
     <artifactId>suite</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>Suite</name>
     <description>Suite is a part of Sonata Project to share DTOs between microservices</description>
 
