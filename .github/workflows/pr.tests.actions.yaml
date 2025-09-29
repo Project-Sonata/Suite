@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - master
+env:
+  GH_USERNAME: ${{ secrets.GH_USERNAME }}
+  GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
 
 jobs:
   test:
@@ -11,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run 'common' module tests
-        run: mvn clean test
+        run: mvn clean install
       - name: Run 'brokers' module tests
         run: mvn clean test -f suite-brokers/pom.xml
       - name: Run 'reactive' module tests
