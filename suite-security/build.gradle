@@ -12,7 +12,7 @@ repositories {
 dependencies {
     api libs.org.springframework.boot.spring.boot.starter
     api libs.org.springframework.boot.spring.boot.starter.security
-    api libs.com.odeyalo.sonata.suite.reactive
+    api(project(":suite-reactive"))
     api libs.org.projectlombok.lombok
     annotationProcessor libs.org.projectlombok.lombok
     testImplementation libs.org.springframework.boot.spring.boot.starter.test

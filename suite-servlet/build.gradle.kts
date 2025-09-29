@@ -14,7 +14,7 @@ dependencies {
     api(libs.org.jetbrains.kotlin.kotlin.reflect)
     api(libs.org.jetbrains.kotlin.kotlin.stdlib)
     api(libs.org.projectlombok.lombok)
-    api(libs.com.odeyalo.sonata.suite)
+    api(project(":common"))
     api(libs.org.springframework.cloud.spring.cloud.starter.openfeign)
     testImplementation(libs.org.springframework.boot.spring.boot.starter.test)
 }
