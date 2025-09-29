@@ -18,7 +18,7 @@
     <properties>
         <java.version>17</java.version>
         <kotlin.version>1.8.21</kotlin.version>
-        <suite.main.version>0.0.9</suite.main.version>
+        <suite.main.version>1.0.0</suite.main.version>
         <feign.version>4.0.0</feign.version>
         <spring-cloud.version>2022.0.2</spring-cloud.version>
     </properties>

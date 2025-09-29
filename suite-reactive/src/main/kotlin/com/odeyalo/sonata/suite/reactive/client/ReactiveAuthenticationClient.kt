@@ -31,7 +31,7 @@ interface ReactiveAuthenticationClient {
     @Throws(
         LoginAuthenticationFailedException::class
     )
-    fun login(@RequestBody credentials: LoginCredentials?): Mono<ResponseEntity<Mono<AuthenticationResultResponse?>?>?>?
+    fun login(@RequestBody credentials: LoginCredentials?): Mono<ResponseEntity<Mono<AuthenticationResultResponse>>>
 
     @PostMapping(
         value = ["/auth/signup"],
@@ -41,7 +41,7 @@ interface ReactiveAuthenticationClient {
     @Throws(
         RegistrationFailedException::class
     )
-    fun registerUser(@RequestBody info: UserRegistrationInfo?): Mono<ResponseEntity<Mono<UserRegistrationConfirmationResponseDto?>?>?>?
+    fun registerUser(@RequestBody info: UserRegistrationInfo?): Mono<ResponseEntity<Mono<UserRegistrationConfirmationResponseDto>>>
 
     @PostMapping(
         value = ["/auth/confirm/email"],
@@ -51,7 +51,7 @@ interface ReactiveAuthenticationClient {
     @Throws(
         ConfirmationCodeException::class
     )
-    fun confirmEmail(@RequestBody codeDto: ConfirmationCodeRequestDto?): Mono<ResponseEntity<Mono<EmailConfirmationStatusResponseDto?>?>?>?
+    fun confirmEmail(@RequestBody codeDto: ConfirmationCodeRequestDto?): Mono<ResponseEntity<Mono<EmailConfirmationStatusResponseDto>>>
 
     @PutMapping("/auth/settings/password-change")
     fun changePassword(@RequestParam("userId") userId: String, @RequestBody body: PasswordContainerDto): Mono<ResponseEntity<Mono<PasswordUpdatingResultDto>>>
