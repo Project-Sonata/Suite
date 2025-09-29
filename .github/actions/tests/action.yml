@@ -6,11 +6,16 @@ runs:
   steps:
     - name: Run 'common' module tests
       run: mvn clean install
+      shell: bash
     - name: Run 'brokers' module tests
       run: mvn clean install -f suite-brokers/pom.xml
+      shell: bash
     - name: Run 'reactive' module tests
       run: mvn clean install -f suite-reactive/pom.xml
+      shell: bash
     - name: Run 'security' module tests
       run: mvn clean install -f suite-security/pom.xml
+      shell: bash
     - name: Run 'servlet' module tests
       run: mvn clean install -f suite-servlet/pom.xml
+      shell: bash
