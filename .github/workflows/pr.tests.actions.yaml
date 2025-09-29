@@ -14,3 +14,5 @@ jobs:
     steps:
       - name: "Run tests"
         uses: ./.github/actions/tests
+      - name: "Deploy to Github Registry"
+        run: mvn deploy
