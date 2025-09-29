@@ -13,7 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-#      - name: "Run tests"
-#        uses: ./.github/actions/tests
-      - name: "Deploy to Github Registry"
-        run: mvn deploy -s settings.xml
+      - name: "Run tests"
+        uses: ./.github/actions/tests
