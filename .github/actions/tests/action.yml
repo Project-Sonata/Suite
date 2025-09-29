@@ -4,7 +4,6 @@ description: 'Run tests for all modules'
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v4
     - name: Run 'common' module tests
       run: mvn clean install
     - name: Run 'brokers' module tests
