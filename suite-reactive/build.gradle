@@ -18,7 +18,7 @@ dependencies {
     annotationProcessor libs.org.projectlombok.lombok
     api libs.org.jetbrains.kotlin.kotlin.reflect
     api libs.org.jetbrains.kotlin.kotlin.stdlib
-    api libs.com.odeyalo.sonata.suite
+    api project(":common")
     api libs.com.playtika.reactivefeign.feign.reactor.spring.cloud.starter
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
     testImplementation libs.io.projectreactor.reactor.test

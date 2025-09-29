@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     api(libs.org.projectlombok.lombok)
-    api(libs.com.odeyalo.sonata.suite)
+    api(project(":common"))
     annotationProcessor(libs.org.projectlombok.lombok)
 }
 
