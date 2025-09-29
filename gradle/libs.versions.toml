@@ -16,6 +16,8 @@ org-springframework-boot-spring-boot-starter = "3.0.7"
 com-odeyalo-sonata-suite-reactive = "1.0.11"
 org-springframework-boot-spring-boot-starter-security = "3.1.2"
 org-springframework-cloud-spring-cloud-starter-contract-stub-runner = "4.0.3"
+org-springframework-cloud-spring-cloud-openfeign-core = "4.0.0"
+org-springframework-cloud-spring-cloud-starter-openfeign = "4.0.2"
 
 [libraries]
 com-fasterxml-jackson-core-jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "com-fasterxml-jackson-core-jackson-core" }
@@ -35,3 +37,5 @@ org-springframework-boot-spring-boot-starter = { module = "org.springframework.b
 com-odeyalo-sonata-suite-reactive = { module = "com.odeyalo.sonata.suite:reactive", version.ref = "com-odeyalo-sonata-suite-reactive" }
 org-springframework-boot-spring-boot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "org-springframework-boot-spring-boot-starter-security" }
 org-springframework-cloud-spring-cloud-starter-contract-stub-runner = { module = "org.springframework.cloud:spring-cloud-starter-contract-stub-runner", version.ref = "org-springframework-cloud-spring-cloud-starter-contract-stub-runner" }
+org-springframework-cloud-spring-cloud-openfeign-core = { module = "org.springframework.cloud:spring-cloud-openfeign-core", version.ref = "org-springframework-cloud-spring-cloud-openfeign-core" }
+org-springframework-cloud-spring-cloud-starter-openfeign = { module = "org.springframework.cloud:spring-cloud-starter-openfeign", version.ref = "org-springframework-cloud-spring-cloud-starter-openfeign" }
