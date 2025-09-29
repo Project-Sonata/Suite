@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: "Add permission to gradle"
         run: chmod +x gradlew
       - name: "Deploy 'common' to Github Registry"
         run: ./gradlew --build-file=common/build.gradle build
