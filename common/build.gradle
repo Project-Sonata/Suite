@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
@@ -11,6 +12,18 @@ repositories {
     maven {
         url = uri('https://repo.maven.apache.org/maven2/')
     }
+}
+
+dependencies {
+    api libs.org.projectlombok.lombok
+    annotationProcessor libs.org.projectlombok.lombok
+    api libs.org.springframework.hateoas.spring.hateoas
+    api libs.com.fasterxml.jackson.core.jackson.core
+    api libs.com.fasterxml.jackson.core.jackson.databind
+    api libs.org.springframework.boot.spring.boot.autoconfigure
+    api libs.org.jetbrains.annotations
+    runtimeOnly libs.org.springframework.boot.spring.boot.devtools
+    testImplementation libs.org.springframework.boot.spring.boot.starter.test
 }
 
 group = 'com.odeyalo.sonata'
