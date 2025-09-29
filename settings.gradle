@@ -1,3 +1,4 @@
 rootProject.name = 'suite'
-include 'common'
 
+include('common')
+include('suite-brokers')
