@@ -5,28 +5,24 @@ plugins {
 repositories {
     mavenLocal()
     maven {
-        url = uri('https://maven.pkg.github.com/Project-Sonata/Common')
-    }
-
-    maven {
         url = uri('https://repo.maven.apache.org/maven2/')
     }
 }
 
 dependencies {
     api libs.org.springframework.boot.spring.boot.starter
+    api libs.org.springframework.boot.spring.boot.starter.security
+    api libs.com.odeyalo.sonata.suite.reactive
+    api libs.org.projectlombok.lombok
     annotationProcessor libs.org.projectlombok.lombok
-    api libs.org.jetbrains.kotlin.kotlin.reflect
-    api libs.org.jetbrains.kotlin.kotlin.stdlib
-    api libs.com.odeyalo.sonata.suite
-    api libs.com.playtika.reactivefeign.feign.reactor.spring.cloud.starter
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
+    testImplementation libs.org.springframework.cloud.spring.cloud.starter.contract.stub.runner
     testImplementation libs.io.projectreactor.reactor.test
 }
 
 group = 'com.odeyalo.sonata.suite'
-version = '1.0.11'
-description = 'suite-reactive'
+version = '1.0.3'
+description = 'suite-security'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
