@@ -1,0 +1,17 @@
+name: 'Tests'
+description: 'Run tests for all modules'
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+    - name: Run 'common' module tests
+      run: mvn clean install
+    - name: Run 'brokers' module tests
+      run: mvn clean install -f suite-brokers/pom.xml
+    - name: Run 'reactive' module tests
+      run: mvn clean install -f suite-reactive/pom.xml
+    - name: Run 'security' module tests
+      run: mvn clean install -f suite-security/pom.xml
+    - name: Run 'servlet' module tests
+      run: mvn clean install -f suite-servlet/pom.xml
