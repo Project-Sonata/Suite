@@ -8,6 +8,11 @@ org-springframework-boot-spring-boot-devtools = "3.0.7"
 org-springframework-boot-spring-boot-starter-test = "3.0.7"
 org-springframework-hateoas-spring-hateoas = "2.1.0"
 com-odeyalo-sonata-suite = "1.0.1"
+com-playtika-reactivefeign-feign-reactor-spring-cloud-starter = "4.0.3"
+io-projectreactor-reactor-test = "3.5.6"
+org-jetbrains-kotlin-kotlin-reflect = "1.8.21"
+org-jetbrains-kotlin-kotlin-stdlib = "1.8.21"
+org-springframework-boot-spring-boot-starter = "3.0.7"
 
 [libraries]
 com-fasterxml-jackson-core-jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "com-fasterxml-jackson-core-jackson-core" }
@@ -19,3 +24,8 @@ org-springframework-boot-spring-boot-devtools = { module = "org.springframework.
 org-springframework-boot-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "org-springframework-boot-spring-boot-starter-test" }
 org-springframework-hateoas-spring-hateoas = { module = "org.springframework.hateoas:spring-hateoas", version.ref = "org-springframework-hateoas-spring-hateoas" }
 com-odeyalo-sonata-suite = { module = "com.odeyalo.sonata:suite", version.ref = "com-odeyalo-sonata-suite" }
+com-playtika-reactivefeign-feign-reactor-spring-cloud-starter = { module = "com.playtika.reactivefeign:feign-reactor-spring-cloud-starter", version.ref = "com-playtika-reactivefeign-feign-reactor-spring-cloud-starter" }
+io-projectreactor-reactor-test = { module = "io.projectreactor:reactor-test", version.ref = "io-projectreactor-reactor-test" }
+org-jetbrains-kotlin-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "org-jetbrains-kotlin-kotlin-reflect" }
+org-jetbrains-kotlin-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "org-jetbrains-kotlin-kotlin-stdlib" }
+org-springframework-boot-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "org-springframework-boot-spring-boot-starter" }

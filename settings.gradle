@@ -2,3 +2,4 @@ rootProject.name = 'suite'
 
 include('common')
 include('suite-brokers')
+include('suite-reactive')
