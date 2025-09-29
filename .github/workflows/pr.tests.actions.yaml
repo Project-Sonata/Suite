@@ -10,5 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run tests
+      - name: Run 'common' module tests
         run: mvn clean test
+      - name: Run 'brokers' module tests
+        run: mvn clean test -f suite-brokers/pom.xml
+      - name: Run 'reactive' module tests
+        run: mvn clean test -f suite-reactive/pom.xml
+      - name: Run 'security' module tests
+        run: mvn clean test -f suite-security/pom.xml
+      - name: Run 'servlet' module tests
+        run: mvn clean test -f suite-servlet/pom.xml
