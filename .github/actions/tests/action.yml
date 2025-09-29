@@ -5,5 +5,5 @@ runs:
   using: "composite"
   steps:
     - name: Run all tests
-      run: ./gradlew test
+      run: ./gradlew build
       shell: bash
