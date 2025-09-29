@@ -18,7 +18,7 @@
         <java.version>17</java.version>
         <kotlin.version>1.8.21</kotlin.version>
         <feign.reactive.version>4.0.3</feign.reactive.version>
-        <suite.main.version>1.0.0</suite.main.version>
+        <suite.main.version>1.0.1</suite.main.version>
     </properties>
 
     <distributionManagement>
