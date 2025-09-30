@@ -11,6 +11,15 @@ repositories {
     maven {
         url = uri('https://repo.maven.apache.org/maven2/')
     }
+
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/Project-Sonata/Suite")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GH_USERNAME")
+            password = project.findProperty("gpr.key") ?: System.getenv("ACCESS_TOKEN")
+        }
+    }
 }
 
 group = 'com.odeyalo.sonata'
