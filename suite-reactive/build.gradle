@@ -1,5 +1,12 @@
 plugins {
     id 'java-library'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
+    id 'org.jetbrains.kotlin.plugin.spring' version "1.9.22"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
@@ -18,7 +25,7 @@ dependencies {
     annotationProcessor libs.org.projectlombok.lombok
     api libs.org.jetbrains.kotlin.kotlin.reflect
     api libs.org.jetbrains.kotlin.kotlin.stdlib
-    api project(":common")
+    api libs.com.odeyalo.sonata.suite
     api libs.com.playtika.reactivefeign.feign.reactor.spring.cloud.starter
     testImplementation libs.org.springframework.boot.spring.boot.starter.test
     testImplementation libs.io.projectreactor.reactor.test
@@ -34,4 +41,19 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Javadoc) {
     options.encoding = 'UTF-8'
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        freeCompilerArgs = ['-Xjsr305=strict']
+        jvmTarget = '17'
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/main/kotlin', 'target/generated-sources/annotations']
+        }
+    }
 }
