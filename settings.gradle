@@ -1,0 +1,23 @@
+rootProject.name = 'suite'
+
+include('common')
+include('suite-reactive')
+include('suite-security')
+include('suite-brokers')
+include("suite-servlet")
+
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Project-Sonata/Suite")
+            credentials {
+                username = System.getenv("GH_USERNAME")
+                password = System.getenv("ACCESS_TOKEN")
+            }
+        }
+    }
+}

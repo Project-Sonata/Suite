@@ -13,5 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: "Deploy to Github Registry"
-        run: mvn deploy -s settings.xml
+      - name: "Add permission to gradle"
+        run: chmod +x gradlew
+      - name: "Deploy 'common' to Github Registry"
+        uses: ./.github/actions/tests

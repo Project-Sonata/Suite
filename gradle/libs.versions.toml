@@ -1,0 +1,41 @@
+[versions]
+com-fasterxml-jackson-core-jackson-core = "2.15.2"
+com-fasterxml-jackson-core-jackson-databind = "2.15.2"
+org-jetbrains-annotations = "24.1.0"
+org-projectlombok-lombok = "1.18.26"
+org-springframework-boot-spring-boot-autoconfigure = "3.0.7"
+org-springframework-boot-spring-boot-devtools = "3.0.7"
+org-springframework-boot-spring-boot-starter-test = "3.0.7"
+org-springframework-hateoas-spring-hateoas = "2.1.0"
+com-odeyalo-sonata-suite = "1.0.1"
+com-playtika-reactivefeign-feign-reactor-spring-cloud-starter = "4.0.3"
+io-projectreactor-reactor-test = "3.5.6"
+org-jetbrains-kotlin-kotlin-reflect = "1.8.21"
+org-jetbrains-kotlin-kotlin-stdlib = "1.8.21"
+org-springframework-boot-spring-boot-starter = "3.0.7"
+com-odeyalo-sonata-suite-reactive = "1.0.11"
+org-springframework-boot-spring-boot-starter-security = "3.1.2"
+org-springframework-cloud-spring-cloud-starter-contract-stub-runner = "4.0.3"
+org-springframework-cloud-spring-cloud-openfeign-core = "4.0.0"
+org-springframework-cloud-spring-cloud-starter-openfeign = "4.0.2"
+
+[libraries]
+com-fasterxml-jackson-core-jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "com-fasterxml-jackson-core-jackson-core" }
+com-fasterxml-jackson-core-jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "com-fasterxml-jackson-core-jackson-databind" }
+org-jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "org-jetbrains-annotations" }
+org-projectlombok-lombok = { module = "org.projectlombok:lombok", version.ref = "org-projectlombok-lombok" }
+org-springframework-boot-spring-boot-autoconfigure = { module = "org.springframework.boot:spring-boot-autoconfigure", version.ref = "org-springframework-boot-spring-boot-autoconfigure" }
+org-springframework-boot-spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools", version.ref = "org-springframework-boot-spring-boot-devtools" }
+org-springframework-boot-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "org-springframework-boot-spring-boot-starter-test" }
+org-springframework-hateoas-spring-hateoas = { module = "org.springframework.hateoas:spring-hateoas", version.ref = "org-springframework-hateoas-spring-hateoas" }
+com-odeyalo-sonata-suite = { module = "com.odeyalo.sonata:suite", version.ref = "com-odeyalo-sonata-suite" }
+com-playtika-reactivefeign-feign-reactor-spring-cloud-starter = { module = "com.playtika.reactivefeign:feign-reactor-spring-cloud-starter", version.ref = "com-playtika-reactivefeign-feign-reactor-spring-cloud-starter" }
+io-projectreactor-reactor-test = { module = "io.projectreactor:reactor-test", version.ref = "io-projectreactor-reactor-test" }
+org-jetbrains-kotlin-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "org-jetbrains-kotlin-kotlin-reflect" }
+org-jetbrains-kotlin-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "org-jetbrains-kotlin-kotlin-stdlib" }
+org-springframework-boot-spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "org-springframework-boot-spring-boot-starter" }
+com-odeyalo-sonata-suite-reactive = { module = "com.odeyalo.sonata.suite:reactive", version.ref = "com-odeyalo-sonata-suite-reactive" }
+org-springframework-boot-spring-boot-starter-security = { module = "org.springframework.boot:spring-boot-starter-security", version.ref = "org-springframework-boot-spring-boot-starter-security" }
+org-springframework-cloud-spring-cloud-starter-contract-stub-runner = { module = "org.springframework.cloud:spring-cloud-starter-contract-stub-runner", version.ref = "org-springframework-cloud-spring-cloud-starter-contract-stub-runner" }
+org-springframework-cloud-spring-cloud-openfeign-core = { module = "org.springframework.cloud:spring-cloud-openfeign-core", version.ref = "org-springframework-cloud-spring-cloud-openfeign-core" }
+org-springframework-cloud-spring-cloud-starter-openfeign = { module = "org.springframework.cloud:spring-cloud-starter-openfeign", version.ref = "org-springframework-cloud-spring-cloud-starter-openfeign" }
