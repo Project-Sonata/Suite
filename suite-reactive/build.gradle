@@ -9,17 +9,6 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
-repositories {
-    mavenLocal()
-    maven {
-        url = uri('https://maven.pkg.github.com/Project-Sonata/Common')
-    }
-
-    maven {
-        url = uri('https://repo.maven.apache.org/maven2/')
-    }
-}
-
 dependencies {
     api libs.org.springframework.boot.spring.boot.starter
     annotationProcessor libs.org.projectlombok.lombok

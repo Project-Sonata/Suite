@@ -3,13 +3,6 @@ plugins {
     `maven-publish`
 }
 
-repositories {
-    mavenLocal()
-    maven {
-        url = uri("https://repo.maven.apache.org/maven2/")
-    }
-}
-
 dependencies {
     api(libs.org.jetbrains.kotlin.kotlin.reflect)
     api(libs.org.jetbrains.kotlin.kotlin.stdlib)
