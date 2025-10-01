@@ -1,0 +1,17 @@
+name: Deploy Suite-Common module only
+
+on: workflow_dispatch
+
+env:
+  GH_USERNAME: ${{ secrets.GH_USERNAME }}
+  ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Add permission to gradle"
+        run: chmod +x gradlew
+      - name: "Deploy 'reactive' to Github Registry"
+        run: ./gradlew --build-file=suite-security/build.gradle publish
