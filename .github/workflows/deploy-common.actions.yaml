@@ -2,6 +2,10 @@ name: Deploy Suite-Common module only
 
 on: workflow_dispatch
 
+env:
+  GH_USERNAME: ${{ secrets.GH_USERNAME }}
+  ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
