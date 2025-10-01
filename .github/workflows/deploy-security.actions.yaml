@@ -13,5 +13,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: "Add permission to gradle"
         run: chmod +x gradlew
-      - name: "Deploy 'common' to Github Registry"
-        run: ./gradlew --build-file=common/build.gradle publish
+      - name: "Deploy 'reactive' to Github Registry"
+        run: ./gradlew --build-file=suite-security/build.gradle publish
