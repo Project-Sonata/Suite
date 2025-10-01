@@ -5,5 +5,5 @@ runs:
   using: "composite"
   steps:
     - name: Run all tests
-      run: ./gradlew build
+      run: ./gradlew publishToMavenLocal build
       shell: bash
