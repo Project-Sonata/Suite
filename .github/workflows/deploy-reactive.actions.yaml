@@ -1,4 +1,4 @@
-name: Deploy Suite-Common module only
+name: Deploy Suite-Reactive module only
 
 on: workflow_dispatch
 
