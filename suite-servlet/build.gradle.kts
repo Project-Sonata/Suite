@@ -16,12 +16,6 @@ group = "com.odeyalo.sonata.suite"
 version = "0.0.2-SNAPSHOT"
 description = "suite-servlet"
 
-publishing {
-    publications.create<MavenPublication>("maven") {
-        from(components["java"])
-    }
-}
-
 tasks.withType<JavaCompile>() {
     options.encoding = "UTF-8"
 }
