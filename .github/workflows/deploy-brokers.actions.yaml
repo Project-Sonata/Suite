@@ -14,4 +14,4 @@ jobs:
       - name: "Add permission to gradle"
         run: chmod +x gradlew
       - name: "Deploy 'brokers' to Github Registry"
-        run: ./gradlew --build-file=suite-brokers/build.gradle publish
+        run: ./gradlew --build-file=suite-brokers/build.gradle.kts publish
