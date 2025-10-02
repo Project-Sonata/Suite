@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 @EqualsAndHashCode(callSuper = true)
 @Value
 public class TrackPausedEvent extends AbstractEvent<TrackPausedPayload> {
-    public static final String EVENT_TYPE = "track_played";
+    public static final String EVENT_TYPE = "track_paused";
 
     public TrackPausedEvent(final TrackPausedPayload body) {
         super(body);
