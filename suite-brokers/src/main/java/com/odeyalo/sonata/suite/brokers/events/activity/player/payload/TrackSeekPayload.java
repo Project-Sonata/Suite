@@ -25,8 +25,8 @@ public class TrackSeekPayload {
                             @NotNull final String trackId,
                             final int oldPosition,
                             final int newPosition) {
-        Assert.isTrue(oldPosition > 0, "Old position should be positive");
-        Assert.isTrue(newPosition > 0, "New position should be positive");
+        Assert.isTrue(oldPosition >= 0, "Old position should be positive");
+        Assert.isTrue(newPosition >= 0, "New position should be positive");
         this.userId = userId;
         this.trackId = trackId;
         this.oldPosition = oldPosition;

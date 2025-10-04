@@ -20,7 +20,7 @@ public class TrackPausedPayload {
     public TrackPausedPayload(@NotNull final String userId,
                               @NotNull final String trackId,
                               final int position) {
-        Assert.isTrue(position > 0, "Position should be positive");
+        Assert.isTrue(position >= 0, "Position should be positive");
         this.userId = userId;
         this.trackId = trackId;
         this.position = position;
