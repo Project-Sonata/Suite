@@ -1,8 +1,12 @@
 package com.odeyalo.sonata.suite.brokers.events;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import lombok.Getter;
+
 import java.util.UUID;
 
-public abstract class AbstractEvent<T> implements SonataEvent {
+@Getter
+public abstract class AbstractEvent<T> implements SonataEvent, EventTypeProvider {
     protected String id;
     protected long creationTime;
     protected T body;
@@ -13,6 +17,7 @@ public abstract class AbstractEvent<T> implements SonataEvent {
         this.body = body;
     }
 
+    @JsonCreator
     public AbstractEvent(String id, long creationTime, T body) {
         this.id = id;
         this.creationTime = creationTime;
@@ -27,9 +32,5 @@ public abstract class AbstractEvent<T> implements SonataEvent {
     @Override
     public long creationTime() {
         return creationTime;
-    }
-
-    public T getBody() {
-        return body;
     }
 }
