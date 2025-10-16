@@ -4,6 +4,7 @@ package com.odeyalo.sonata.suite.brokers;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
+import com.odeyalo.sonata.suite.brokers.events.playlist.gen.GeneratedPlaylistType;
 import com.odeyalo.sonata.suite.brokers.events.playlist.gen.PlaylistTracksGeneratedEvent;
 import com.odeyalo.sonata.suite.brokers.events.playlist.gen.payload.GeneratedTrack;
 import com.odeyalo.sonata.suite.brokers.events.playlist.gen.payload.GenerativePlaylistEvent;
@@ -25,7 +26,7 @@ public class GenerativePlaylistEventTest {
                         new GeneratedTrack("1", 0),
                         new GeneratedTrack("2", 1),
                         new GeneratedTrack("3", 2)
-                ))
+                )), GeneratedPlaylistType.ON_REPEAT
         );
 
         final String json = mapper.writeValueAsString(event);
