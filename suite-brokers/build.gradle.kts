@@ -17,7 +17,7 @@ dependencies {
 }
 
 group = "com.odeyalo.sonata.suite"
-version = "0.0.10"
+version = "0.0.11"
 description = "suite-brokers"
 
 tasks.withType<JavaCompile>() {
