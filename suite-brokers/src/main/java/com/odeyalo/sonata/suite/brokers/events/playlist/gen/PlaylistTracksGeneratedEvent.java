@@ -25,7 +25,7 @@ public class PlaylistTracksGeneratedEvent extends GenerativePlaylistEvent<Playli
     public PlaylistTracksGeneratedEvent(@JsonProperty("id") @NotNull final String id,
                                         @JsonProperty("creationTime") final long creationTime,
                                         @JsonProperty("body") @NotNull final PlaylistTracksGeneratedPayload body,
-                                        @JsonProperty("playlist_type") GeneratedPlaylistType type) {
+                                        @JsonProperty("playlist_type") final GeneratedPlaylistType type) {
         super(id, creationTime, body, type);
     }
 

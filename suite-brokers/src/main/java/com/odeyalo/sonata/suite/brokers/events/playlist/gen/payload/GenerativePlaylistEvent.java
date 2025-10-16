@@ -3,9 +3,9 @@ package com.odeyalo.sonata.suite.brokers.events.playlist.gen.payload;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.odeyalo.sonata.suite.brokers.events.AbstractEvent;
 import com.odeyalo.sonata.suite.brokers.events.playlist.gen.GeneratedPlaylistType;
+import com.odeyalo.sonata.suite.brokers.events.playlist.gen.PlaylistMetaGeneratedEvent;
 import com.odeyalo.sonata.suite.brokers.events.playlist.gen.PlaylistTracksGeneratedEvent;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 )
 @JsonSubTypes({
         @JsonSubTypes.Type(name = "playlist_tracks_generated", value = PlaylistTracksGeneratedEvent.class),
+        @JsonSubTypes.Type(name = "playlist_meta_generated", value = PlaylistMetaGeneratedEvent.class),
 })
 @EqualsAndHashCode(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)

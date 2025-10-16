@@ -15,6 +15,7 @@ public class PlaylistMetaGeneratedPayload {
     @JsonProperty("tracks")
     PlaylistTracksGeneratedPayload parent;
     @NotNull
+    @JsonProperty("meta")
     Meta meta;
 
     @Value

@@ -26,7 +26,7 @@ public class PlaylistMetaGeneratedEvent extends GenerativePlaylistEvent<Playlist
     public PlaylistMetaGeneratedEvent(@JsonProperty("id") @NotNull final String id,
                                       @JsonProperty("creationTime") final long creationTime,
                                       @JsonProperty("body") @NotNull final PlaylistMetaGeneratedPayload body,
-                                      @NotNull final GeneratedPlaylistType type) {
+                                      @JsonProperty("playlist_type") @NotNull final GeneratedPlaylistType type) {
         super(id, creationTime, body, type);
     }
 
