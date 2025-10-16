@@ -1,11 +1,13 @@
 package com.odeyalo.sonata.suite.brokers.events;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.UUID;
 
 @Getter
+@EqualsAndHashCode
 public abstract class AbstractEvent<T> implements SonataEvent, EventTypeProvider {
     protected String id;
     protected long creationTime;

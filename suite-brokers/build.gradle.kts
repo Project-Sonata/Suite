@@ -7,10 +7,17 @@ dependencies {
     api(libs.org.projectlombok.lombok)
     api(libs.com.odeyalo.sonata.suite)
     annotationProcessor(libs.org.projectlombok.lombok)
+
+    testImplementation(libs.junit.jupiter.api)
+    testRuntimeOnly(libs.junit.jupiter.engine)
+
+    testImplementation(libs.com.fasterxml.jackson.core.jackson.core)
+    testImplementation(libs.com.fasterxml.jackson.core.jackson.databind)
+    testImplementation(libs.com.fasterxml.jackson.core.jackson.modules.parameter.names)
 }
 
 group = "com.odeyalo.sonata.suite"
-version = "0.0.10"
+version = "0.0.11"
 description = "suite-brokers"
 
 tasks.withType<JavaCompile>() {
